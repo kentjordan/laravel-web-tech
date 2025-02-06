@@ -1,4 +1,4 @@
-<div class="flex flex-col select-none justify-between w-64 bg-neutral-100 border border-neutral-200 h-screen p-4">
+<div class="hidden lg:flex flex-col select-none justify-between w-64 bg-neutral-100 border border-neutral-200 h-screen p-4">
     <div>
         <div class="pt-8">
             <h1 class="text-2xl">Kent's Inventory</h1>
