@@ -19,7 +19,7 @@
         @include("components.sidebar")
         <div class="w-full h-screen flex items-center justify-center">
           <div class="flex flex-col">
-            <h1 class="text-2xl">This is Inventory</h1>
+            <h1 class="text-2xl">Inventory's Dashboard</h1>
             {{-- <a class="border text-neutral-500 rounded p-1 text-sm mt-4 text-center" href="/auth/login">Login </a> --}}
           </div>
         </div>
