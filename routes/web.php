@@ -9,3 +9,5 @@ Route::get('/', function () {
 Route::get('/auth/login', 'App\Http\Controllers\AuthController@login');
 
 Route::get('/products/view', 'App\Http\Controllers\ProductsController@viewProducts');
+
+Route::get('/hello', 'App\Http\Controllers\HelloController@index');
