@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Login</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @endif
-    </head>
-   <body>
-        <div class="w-full h-screen flex items-center justify-center">
-            <div class="flex flex-col border w-64 p-4 rounded">
-                <h1 class="mb-4 font-bold text-xl">Inventory Login</h1>
-                <input class="border mt-2 rounded px-2 py-1 placeholder:text-sm" type="text" placeholder="User">
-                <input class="border mt-2 rounded px-2 py-1 placeholder:text-sm" type="password" placeholder="Password">
-                <a href="/" class="text-center bg-rose-500 text-white rounded mt-4 p-1 text-sm">SUBMIT</a>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex align-items-center justify-content-center"
+      style="height: 100vh"
+    >
+      <div
+        class="col-lg-4 col-md-5 col-sm-6 justify-content-center border p-3 rounded"
+      >
+        <span class="fs-4 fw-bold">Login</span>
+        <div class="flex-column d-flex gap-2 mt-3">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Email"
+            class="px-2 py-1 border rounded"
+          />
+          <input
+            type="password"
+            name=""
+            id=""
+            placeholder="Password"
+            class="px-2 py-1 border rounded"
+          />
+          <button class="btn-primary btn mt-2">SUBMIT</button>
         </div>
-   </body>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 </html>

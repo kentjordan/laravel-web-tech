@@ -11,10 +11,16 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <script src="https://unpkg.com/lucide@latest"></script>
 
-        <!-- Styles / Scripts -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous" />
+
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
+
     </head>
    <body class="flex">
         @include("components.sidebar")
@@ -31,27 +37,28 @@
                 </div>
             </div>
             <div class="overflow-auto">
-                <table class=" w-full">
-                    <tr class="bg-neutral-100 *:border *:p-2">
-                        <th class="text-left">Actions</th>
-                        <th class="text-left">ID</th>
-                        <th class="text-left">Name</th>
+                <table class="table">
+                    <tr>
+                        <th>Actions</th>
+                        <th>ID</th>
+                        <th>Name</th>
                         <th class="text-left max-w-16">Description</th>
-                        <th class="text-left">Price (PHP)</th>
-                        <th class="text-left">Qty</th>
+                        <th>Price (PHP)</th>
+                        <th>Qty</th>
                     </tr>
                     @foreach ($product_items as $item)
                         <tr class="*:border *:p-4">
-                            <td class="text-left">
+                            <td>
                                 <div class="flex gap-2">
-                                <i data-lucide="pencil" class="cursor-pointer w-4"></i>
-                                <i data-lucide="trash" class="cursor-pointer w-4 text-red-700"></i>
-                        </div></td>
-                            <td class="text-left">{{$item['id']}}</td>
-                            <td class="text-left">{{$item['name']}}</td>
+                                    <i data-lucide="pencil" class="cursor-pointer w-4"></i>
+                                    <i data-lucide="trash" class="cursor-pointer w-4 text-red-700"></i>
+                                </div>
+                            </td>
+                            <td>{{$item['id']}}</td>
+                            <td>{{$item['name']}}</td>
                             <td class="text-left max-w-[32ch] text-ellipsis overflow-hidden whitespace-nowrap">{{$item['description']}}</td>
-                            <td class="text-left">{{$item['price']}}</td>
-                            <td class="text-left">{{$item['qty']}}</td>
+                            <td>{{$item['price']}}</td>
+                            <td>{{$item['qty']}}</td>
                         </tr>
                     @endforeach
                 </table>
